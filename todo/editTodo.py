@@ -4,7 +4,7 @@ from todo.cekTodo import viewTodo
 
 def editTodo():
     #akan menampilkan todo terkini
-    # viewTodo()   
+    viewTodo()   
     inputUser = int(input("masukan list yang akan kamu masukan : "))
     
     for data in dataBase.dataTodo:
