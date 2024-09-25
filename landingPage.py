@@ -40,24 +40,25 @@ def todo():
     
     
 
-def main():
-    print("==================================")
-    print("==========Selamat Datang==========")
-    print("==================================")
+if __name__ == "__main__":
+    def main():
+        print("==================================")
+        print("==========Selamat Datang==========")
+        print("==================================")
     
-    cek = True
-    while cek:
-        print("silahkan login!!")
-        username = input("Username: ")
-        password  = input("Password: ")     
+        cek = True
+        while cek:
+            print("silahkan login!!")
+            username = input("Username: ")
+            password  = input("Password: ")     
         
-        if(logins.login_account(username,password)):
-            print("berhasil logins")
-            todo()
-            cek = False
-        else:
-            print("data kosong")
-            daftar = input("apakah ingin mendaftar y/n : ")
-            logins.create_account(username,password) if daftar == 'y' else "gagal logins"
+            if(logins.login_account(username,password)):
+                print("berhasil logins")
+                todo()
+                cek = False
+            else:
+                print("data kosong")
+                daftar = input("apakah ingin mendaftar y/n : ")
+                logins.create_account(username,password) if daftar == 'y' else "gagal logins"
             
 main()
